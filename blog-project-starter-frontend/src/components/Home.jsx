@@ -23,7 +23,7 @@ function Home() {
                 <div className="w-full sm:w-1/2 flex-col justify-center">
                     <h2 className='text-3xl md:text-6xl font-bold pb-2'>Hy! I Am</h2>
                     <h2 className='text-4xl md:text-7xl font-bold text-orange-400 py-2'>Jacky Thomas</h2>
-                    <img src={BlogProfileImage} className='w-60 block sm:hidden' alt="Blog Profile Image" />
+                    <img src={BlogProfileImage}  className='w-60 block sm:hidden' alt="Blog Profile Image" />
                     <p className='py-2'>I can create stunning website for your company, Do check my works. I won't disappoint you. Try me for 7 Days before you decide anything.</p>
                     <button className='button-style mt-2'>Hire Me</button>
                 </div>
@@ -36,12 +36,12 @@ function Home() {
 
 
             <div className='flex justify-evenly py-6'>
-                <img src={HTML} style={{ width: "50px" }} />
-                <img src={CSS} style={{ width: "50px" }} />
-                <img src={JS} style={{ width: "50px" }} />
-                <img src={REACTICON} style={{ width: "50px" }} />
-                <img src={DB} style={{ width: "50px" }} />
-                <img src={NODE} style={{ width: "50px" }} />
+                <img src={HTML} alt="Blog image" style={{ width: "50px" }} />
+                <img src={CSS} alt="Blog image" style={{ width: "50px" }} />
+                <img src={JS} alt="Blog image" style={{ width: "50px" }} />
+                <img src={REACTICON} alt="Blog image" style={{ width: "50px" }} />
+                <img src={DB} alt="Blog image" style={{ width: "50px" }} />
+                <img src={NODE} alt="Blog image" style={{ width: "50px" }} />
             </div>
 
             <div className='flex flex-col mt-10 items-center justify-around sm:flex-row'>
@@ -74,11 +74,11 @@ function Home() {
                 <h2 className='text-center text-5xl my-14 font-bold'>Checkout My Live <span className='text-orange-400'>Projects</span> Here</h2>
                 <div className='flex justify-around my-5 flex-col sm:flex-row'>
 
-                    <img src={P1} className='w-64 border rounded-md cursor-pointer' alt="" />
+                    <img src={P1} className='w-64 border rounded-md cursor-pointer' alt="Blog image" />
 
-                    <img src={P2} className='w-64 border rounded-md cursor-pointer' alt="" />
+                    <img src={P2} className='w-64 border rounded-md cursor-pointer' alt="Blog image" />
 
-                    <img src={P3} className='w-64 border rounded-md cursor-pointer' alt="" />
+                    <img src={P3} className='w-64 border rounded-md cursor-pointer' alt="Blog image" />
 
                 </div>
             </div>
@@ -86,7 +86,7 @@ function Home() {
 
             <div className='flex items-center justify-center my-14'>
                 <div className='justify-center hidden sm:block'>
-                    <img src={BlogImage} className='w-60 md:w-96 ' alt="Blog Profile Image" />
+                    <img src={BlogImage} className='w-60 md:w-96 ' alt="" />
 
                 </div>
                 <div className="w-full sm:w-1/2 flex-col justify-center ml-6">
