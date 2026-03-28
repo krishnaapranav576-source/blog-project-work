@@ -1,20 +1,20 @@
 # dependencies
-frontend/node_modules/
-backend/node_modules/
+blog-project-starter-frontend/node_modules/
+blog-project-starter-backend/node_modules/
 
 # build folders
-frontend/build/
-backend/dist/
+blog-project-starter-frontend/build/
+blog-project-starter-backend/dist/
 
 # vercel files
 .vercel/
-frontend/.vercel/
-backend/.vercel/
+blog-project-starter-frontend/.vercel/
+blog-project-starter-backend/.vercel/
 
 # environment files
 .env
-frontend/.env
-backend/.env
+blog-project-starter-frontend/.env
+blog-project-starter-backend/.env
 
 # logs
 npm-debug.log*
