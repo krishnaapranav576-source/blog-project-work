@@ -20,6 +20,10 @@
     },
     {
       "src": "/(.*)",
+      "dest": "blog-project-starter-frontend/build/$1"
+    },
+    {
+      "src": "/",
       "dest": "blog-project-starter-frontend/build/index.html"
     }
   ]
