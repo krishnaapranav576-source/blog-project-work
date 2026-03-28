@@ -36,12 +36,12 @@ function Home() {
 
 
             <div className='flex justify-evenly py-6'>
-                <img src={HTML} alt="Blog image" style={{ width: "50px" }} />
-                <img src={CSS} alt="Blog image" style={{ width: "50px" }} />
-                <img src={JS} alt="Blog image" style={{ width: "50px" }} />
-                <img src={REACTICON} alt="Blog image" style={{ width: "50px" }} />
-                <img src={DB} alt="Blog image" style={{ width: "50px" }} />
-                <img src={NODE} alt="Blog image" style={{ width: "50px" }} />
+                <img src={HTML} alt="html image" style={{ width: "50px" }} />
+                <img src={CSS} alt="css image" style={{ width: "50px" }} />
+                <img src={JS} alt="js image" style={{ width: "50px" }} />
+                <img src={REACTICON} alt="reaction image" style={{ width: "50px" }} />
+                <img src={DB} alt="db image" style={{ width: "50px" }} />
+                <img src={NODE} alt="node image" style={{ width: "50px" }} />
             </div>
 
             <div className='flex flex-col mt-10 items-center justify-around sm:flex-row'>
@@ -74,11 +74,11 @@ function Home() {
                 <h2 className='text-center text-5xl my-14 font-bold'>Checkout My Live <span className='text-orange-400'>Projects</span> Here</h2>
                 <div className='flex justify-around my-5 flex-col sm:flex-row'>
 
-                    <img src={P1} className='w-64 border rounded-md cursor-pointer' alt="Blog image" />
+                    <img src={P1} className='w-64 border rounded-md cursor-pointer' alt="p1 image" />
 
-                    <img src={P2} className='w-64 border rounded-md cursor-pointer' alt="Blog image" />
+                    <img src={P2} className='w-64 border rounded-md cursor-pointer' alt="p2 image" />
 
-                    <img src={P3} className='w-64 border rounded-md cursor-pointer' alt="Blog image" />
+                    <img src={P3} className='w-64 border rounded-md cursor-pointer' alt="p3 image" />
 
                 </div>
             </div>
