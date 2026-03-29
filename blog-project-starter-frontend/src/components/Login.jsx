@@ -35,55 +35,76 @@ function Login() {
             });
     };
 
-    return (
-        <div className="flex justify-center items-center h-screen bg-gray-100">
-            <form
-                onSubmit={handleLogin}
-                className="p-10 bg-white rounded-lg shadow-md"
-                style={{ width: "75%" }}
-            >
-                <h2 className="text-2xl font-bold mb-5 text-gray-800">Login</h2>
+  return (
+  <div className="min-h-screen bg-[#09090b] flex items-center justify-center px-6">
+    <form
+      onSubmit={handleLogin}
+      className="w-full max-w-xl bg-[#111114] border border-slate-800 rounded-[2rem] p-8 md:p-10"
+    >
+      <p className="uppercase tracking-[0.3em] text-slate-500 text-sm mb-4">
+        Login
+      </p>
 
-                <div className="mb-4">
-                    <label className="block text-gray-700">Email:</label>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                        className="mt-1 p-2 w-full border rounded"
-                    />
-                </div>
+      <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-4">
+        Welcome Back
+      </h2>
 
-                <div className="mb-4">
-                    <label className="block text-gray-700">Password:</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                        className="mt-1 p-2 w-full border rounded"
-                    />
-                </div>
+      <p className="text-slate-400 text-lg leading-8 mb-10 max-w-md">
+        Sign in to continue building and exploring your space.
+      </p>
 
-                <p className="text-red-600 cursor-pointer my-2">{err}</p>
+      <div className="mb-6">
+        <label className="block text-slate-400 text-sm mb-3">
+          Email
+        </label>
 
-                <p
-                    className="text-blue-600 cursor-pointer my-2"
-                    onClick={() => navigate("/signup")}
-                >
-                    New user? Register here
-                </p>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          placeholder="Enter your email"
+          className="w-full px-5 py-4 rounded-2xl bg-[#09090b] border border-slate-800 text-white placeholder:text-slate-500 focus:outline-none focus:border-orange-400 transition duration-300"
+        />
+      </div>
 
-                <button
-                    type="submit"
-                    className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200 ease-in-out"
-                >
-                    Login
-                </button>
-            </form>
-        </div>
-    );
+      <div className="mb-5">
+        <label className="block text-slate-400 text-sm mb-3">
+          Password
+        </label>
+
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+          placeholder="Enter your password"
+          className="w-full px-5 py-4 rounded-2xl bg-[#09090b] border border-slate-800 text-white placeholder:text-slate-500 focus:outline-none focus:border-orange-400 transition duration-300"
+        />
+      </div>
+
+      {err && (
+        <p className="text-red-400 text-sm mb-5">
+          {err}
+        </p>
+      )}
+
+      <p
+        className="text-slate-500 hover:text-orange-400 cursor-pointer text-sm mb-8 transition duration-300"
+        onClick={() => navigate("/signup")}
+      >
+        New here? <span className="text-orange-400">Create an account</span>
+      </p>
+
+      <button
+        type="submit"
+        className="w-full px-8 py-4 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-medium transition duration-300"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+)
 }
 
 export default Login;

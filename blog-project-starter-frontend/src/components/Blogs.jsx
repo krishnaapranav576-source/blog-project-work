@@ -77,81 +77,105 @@ function Blogs() {
         }
     };
 
-    return (
-        <div className="blog-section py-14">
-            <h2 className="text-center text-5xl font-bold mb-14">
-                Latest <span className="text-orange-400">Blogs</span> 📚
-            </h2>
 
-            {admin && (
-                <div
-                    className="blog-creation-form mb-8"
-                    style={{ width: "80%", margin: "auto" }}
-                >
-                    <form onSubmit={handleNewBlogSubmit} className="flex flex-col gap-4">
-                        <input
-                            type="text"
-                            placeholder="Blog Title"
-                            value={newTitle}
-                            onChange={(e) => setNewTitle(e.target.value)}
-                            className="p-2 border rounded"
-                            required
-                        />
+return (
+  <div className="min-h-screen bg-[#09090b] text-white py-16 px-6 overflow-hidden">
+    <div className="max-w-7xl mx-auto">
+      
+      <div className="mb-16">
+        <p className="uppercase tracking-[0.3em] text-slate-500 text-sm mb-4 text-center">
+          Writing
+        </p>
 
-                        <textarea
-                            placeholder="Blog Content"
-                            value={newContent}
-                            onChange={(e) => setNewContent(e.target.value)}
-                            className="p-2 border rounded"
-                            rows="4"
-                            required
-                        />
+        <h2 className="text-center text-4xl md:text-6xl font-black">
+          Latest <span className="text-orange-400">Blogs</span>
+        </h2>
 
-                        <button
-                            type="submit"
-                            className="bg-orange-400 text-white p-2 rounded hover:bg-orange-600"
-                        >
-                            Add Blog
-                        </button>
-                    </form>
-                </div>
-            )}
+        <p className="text-slate-400 mt-6 text-lg max-w-2xl mx-auto text-center leading-8">
+          Explore fresh ideas, stories and updates from the latest posts.
+        </p>
+      </div>
 
-            <div className="blogs-container grid grid-cols-1 md:grid-cols-2 gap-6 container mx-auto px-4">
-                {blogs.map((blog) => (
-                    <div
-                        key={blog._id}
-                        className="blog-post mb-8 p-6 bg-white shadow-lg rounded-lg"
-                    >
-                        <h3 className="blog-title font-semibold text-2xl text-gray-800 mb-3">
-                            {blog.newTitle}
-                        </h3>
 
-                        <p className="blog-date text-gray-400 text-sm mb-4">
-                            {blog.date}
-                        </p>
+      {admin && (
+        <div className="max-w-3xl mx-auto mb-16 bg-[#111114] border border-slate-800 rounded-[2rem] p-8 md:p-10">
+          <h3 className="text-2xl font-bold mb-6 text-white">
+            Create New Blog
+          </h3>
 
-                        <p className="blog-content text-gray-600 mb-4">
-                            {blog.newContent}
-                        </p>
+          <form onSubmit={handleNewBlogSubmit} className="flex flex-col gap-5">
+            <input
+              type="text"
+              placeholder="Enter blog title..."
+              value={newTitle}
+              onChange={(e) => setNewTitle(e.target.value)}
+              className="w-full px-5 py-4 rounded-2xl bg-[#09090b] border border-slate-800 text-white placeholder:text-slate-500 focus:outline-none focus:border-orange-400 transition duration-300"
+              required
+            />
 
-                        <span
-                            className="text-blue-500 cursor-pointer"
-                            onClick={() => handleLike(blog._id)}
-                        >
-                            Like
-                        </span>
+            <textarea
+              placeholder="Write your blog content here..."
+              value={newContent}
+              onChange={(e) => setNewContent(e.target.value)}
+              rows="6"
+              className="w-full px-5 py-4 rounded-2xl bg-[#09090b] border border-slate-800 text-white placeholder:text-slate-500 focus:outline-none focus:border-orange-400 transition duration-300 resize-none"
+              required
+            />
 
-                        <span className="ml-2">
-                            {blog.likes} Likes
-                        </span>
-                    </div>
-                ))}
+            <button
+              type="submit"
+              className="w-fit px-8 py-4 rounded-full bg-orange-500 hover:bg-orange-600 transition duration-300 font-medium text-white"
+            >
+              Add Blog
+            </button>
+          </form>
+        </div>
+      )}
+
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        {blogs.map((blog) => (
+          <div
+            key={blog._id}
+            className="bg-[#111114] border border-slate-800 rounded-[2rem] p-6 hover:border-orange-500/50 transition duration-300"
+          >
+            <div className="mb-5">
+              <p className="text-sm text-slate-500 mb-3">
+                {blog.date}
+              </p>
+
+              <h3 className="text-2xl font-bold text-white leading-snug mb-4">
+                {blog.newTitle}
+              </h3>
             </div>
 
-            <Footer />
-        </div>
-    );
+            <p className="text-slate-400 leading-8 mb-8 line-clamp-4">
+              {blog.newContent}
+            </p>
+
+            <div className="flex items-center justify-between border-t border-slate-800 pt-5">
+              <button
+                onClick={() => handleLike(blog._id)}
+                className="text-orange-400 hover:text-orange-300 transition duration-300 font-medium"
+              >
+                Like
+              </button>
+
+              <span className="text-slate-500 text-sm">
+                {blog.likes} Likes
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-20">
+        <Footer />
+      </div>
+    </div>
+  </div>
+)
+
 }
 
 export default Blogs;
